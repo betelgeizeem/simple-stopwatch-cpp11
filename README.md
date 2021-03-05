@@ -45,13 +45,18 @@ rand_sum of 10000000 = 5.00034e+06
 Stop & resume & wait 1s & stop the same watch... 
   t_proc = 0.079543s
   t_wall = 1.08035s
-  t_proc/t_wall = 0.0736272 // processor spent some little additional time for calling sleeping routine (std::this_thread::sleep_for(...)), but 1 seconds of waiting contributed here to get overall ratio = 0.07 efficiency: 7% of previous calculations and 93% of waiting.
+  t_proc/t_wall = 0.0736272 // processor spent some little additional time 
+  	// for calling sleeping routine (std::this_thread::sleep_for(...)), 
+  	// but 1 seconds of waiting contributed here to get overall 
+  	// ratio = 0.07 efficiency: 7% of previous calculations and 
+  	// 93% of waiting.
 ------------- 
 Start watch, checking function measure...
 rand_sum of 10000000 = 5.00045e+06
   t_proc = 0.066823s
   t_wall = 0.0669298s
-  t_proc/t_wall = 0.998404 // processor spent quite all time for work, but now the result was obtained by measure() method
+  t_proc/t_wall = 0.998404 // processor spent quite all time for work, 
+  	// but now the result was obtained by measure() method
 ------------- 
 Doing useful work 4 times in separate threads... 
 rand_sum of 10000000 = 5.00197e+06
@@ -60,6 +65,7 @@ rand_sum of 10000000 = 4.99942e+06
 rand_sum of 10000000 = 4.99831e+06
   t_proc = 15.9002s
   t_wall = 4.69266s
-  t_proc/t_wall = 3.38831 // the program created 4 threads and they together spent 3.39 x time more than system time that passed
+  t_proc/t_wall = 3.38831 // the program created 4 threads and 
+  	// they together spent 3.39 x time more than system time that passed
 ```
 Ratio `t_proc/t_wall` indicates efficiency of programs' processor core usage.
