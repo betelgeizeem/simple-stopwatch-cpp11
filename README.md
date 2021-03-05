@@ -36,7 +36,7 @@ The line can vary depending on your compiler and OS. Main ideas: call the compil
 ## Test & some explanations
 The repo provides test `test.cpp` file to demonstrate the functionality. Sample output with author's comments:
 ```
-Start stopwatch, checking separate functions time_wallclock, time_processor...
+Start stopwatch, checking times calling a "heavy" function...
 rand_sum of 10000000 = 5.00034e+06
   t_proc = 0.07952s
   t_wall = 0.0795423s
@@ -45,7 +45,7 @@ rand_sum of 10000000 = 5.00034e+06
 Stop & resume & wait 1s & stop the same watch... 
   t_proc = 0.079543s
   t_wall = 1.08035s
-  t_proc/t_wall = 0.0736272 // processor spent some little additional time 
+  t_proc/t_wall = 0.0736272 // processor spent a bit of additional time 
   	// for calling sleeping routine (std::this_thread::sleep_for(...)), 
   	// but 1 seconds of waiting contributed here to get overall 
   	// ratio = 0.07 efficiency: 7% of previous calculations and 
