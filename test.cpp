@@ -51,9 +51,8 @@ void check_async_run(std::size_t ntimes) {
 	sw.start();
 	auto futures = std::vector<std::future<double>>();
 	for (std::size_t i = 0; i < ntimes; ++i)
-        futures.push_back(std::async(std::launch::async, &rand_sum, n));
+		futures.push_back(std::async(std::launch::async, &rand_sum, n));
 	for (auto& i: futures) i.get();
-
 	output_times(sw);
 }
 

@@ -18,12 +18,12 @@ struct time_point_t { proc_t p; wall_t w; };
 	// Time point: processor and system time.
 
 
-// Find out time now; first \--- processor time, 
-//                   second \--- system time.
+// Find out time now; first --- processor time, 
+//                   second --- system time.
 static time_point_t now_wall_and_proc() { time_point_t a; a.w = now(a.w); a.p = now(a.p); return a; }
 
-// Find out time now; first \--- system time, 
-//                   second \--- processor time.
+// Find out time now; first --- system time, 
+//                   second --- processor time.
 static time_point_t now_proc_and_wall() { time_point_t a; a.p = now(a.p); a.w = now(a.w); return a; }
 
 // Find out time now, by default.
