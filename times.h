@@ -35,7 +35,7 @@ class elapsed_time_t {
 public:
 	// Class constructor for zero elapsed time.
 	elapsed_time_t() : p(0), 
-					   w(std::chrono::duration<float>::zero()) {}
+	                   w(std::chrono::duration<float>::zero()) {}
 	
 	// Class constructor for non-zero elapsed time.
 	// p --- process time. w --- system time.
